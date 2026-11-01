@@ -24,7 +24,7 @@ A simple online Task Manager built with plain HTML, CSS and JavaScript. Tasks ar
 | Direction | Link |
 |---|---|
 | My PR merged into partner's repo | PR_TO_PARTNER_LINK |
-| Partner's PR merged into my repo | PR_FROM_PARTNER_LINK |
+| Partner's PR merged into my repo | https://github.com/vistula-team-project-72591/vistula-task-manager/pull/2 |
 
 ## Features
 
