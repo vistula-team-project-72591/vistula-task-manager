@@ -1,0 +1,75 @@
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --border: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container { max-width: 720px; margin: 0 auto; padding: 32px 16px; }
+
+.header h1 { margin: 0 0 4px; }
+.student { margin: 0 0 24px; color: var(--muted); }
+
+.card, .task-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+label { display: block; font-weight: 600; margin: 8px 0 4px; }
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.form-actions { display: flex; gap: 8px; margin-top: 12px; }
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font: inherit;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+}
+button:disabled { opacity: .6; cursor: default; }
+button.secondary, .edit-task { background: #e5e7eb; color: var(--text); }
+.delete-task { background: var(--danger); }
+.toggle-task { background: var(--success); }
+
+.status { min-height: 24px; margin: 16px 0; font-weight: 500; }
+.status.error { color: var(--danger); }
+.status.success { color: var(--success); }
+
+.task-list { display: flex; flex-direction: column; gap: 12px; }
+
+.task-item { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.task-title { margin: 0 0 4px; font-size: 1.1rem; }
+.task-description { margin: 0 0 8px; color: var(--muted); white-space: pre-wrap; }
+.task-status { font-size: .85rem; padding: 2px 8px; border-radius: 999px; background: #fef3c7; }
+.task-item.done .task-title { text-decoration: line-through; color: var(--muted); }
+.task-item.done .task-status { background: #dcfce7; }
+.task-actions { display: flex; gap: 6px; align-items: flex-start; flex-wrap: wrap; }
+
+.empty { color: var(--muted); text-align: center; }
+.footer { margin-top: 32px; text-align: center; }
+a { color: var(--accent); }
